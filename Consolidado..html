@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis Ejercicios de CSS</title>
+
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    nav a {
+      margin-right: 15px;
+      cursor: pointer;
+      color: #0066cc;
+      text-decoration: underline;
+    }
+    .section {
+      display: none;
+      margin-top: 20px;
+      padding: 10px;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Estilo para mostrar sección activa */
+    .active {
+      display: block;
+    }
+
+    /* BIENVENIDO */
+    p {
+      color: gray; /* Todos los párrafos en gris */
+    }
+    .importante {
+      color: red;
+      font-weight: bold;
+    }
+    #tituloEj1 {
+      text-align: center;
+      color: blue;
+    }
+
+    /* Ejercicio 2 */
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    h1, h2 {
+      color: green;
+    }
+    .ej2 p {
+      font-size: 18px;
+    }
+
+    /* Ejercicio 3 */
+    .resaltado {
+      background-color: yellow;
+      padding: 4px;
+    }
+    #encabezado {
+      text-align: center;
+    }
+    .ej3 p {
+      color: blue;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>INTEGRANTES:</h1>
+  <h1>Esperanza Anais Castillo Palacios</h1>
+  <h1>Ejercicios CSS Integrados</h1>
+
+  <nav>
+    <a onclick="mostrar('ej1')">Ejercicio 1</a>
+    <a onclick="mostrar('ej2')">Ejercicio 2</a>
+    <a onclick="mostrar('ej3')">Ejercicio 3</a>
+  </nav>
+
+  <!-- ======================== -->
+  <!-- Ejercicio 1 -->
+  <!-- ======================== -->
+
+  <div id="ej1" class="section active">
+    <h2 id="tituloEj1">Bienvenido</h2>
+
+    <p class="importante">Este texto es importante</p>
+    <p>Este es un texto normal</p>
+  </div>
+
+  <!-- ======================== -->
+  <!-- Ejercicio 2 -->
+  <!-- ======================== -->
+
+  <div id="ej2" class="section ej2">
+    <h2>Ejercicio 2</h2>
+
+    <h1>Título principal</h1>
+    <h2>Subtítulo</h2>
+    <p>Párrafo de texto</p>
+    <div>Contenido en div</div>
+  </div>
+
+  <!-- ======================== -->
+  <!-- Ejercicio 3 -->
+  <!-- ======================== -->
+
+  <div id="ej3" class="section ej3">
+    <h2 id="encabezado">Ejercicio 3</h2>
+
+    <p class="resaltado">Párrafo destacado</p>
+    <p>Párrafo normal</p>
+
+    <h3>Sección</h3>
+    <div class="resaltado">Texto dentro de un div</div>
+  </div>
+
+  <script>
+    function mostrar(id) {
+      document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
